@@ -28,7 +28,7 @@ There should be a similar output to the above image.
 
 # Trying Some Commands
 
-Now, you can try running some commands on the remote system. Note that the systems have horribly outdated packages, so some behaviour may be unexpected (Ex: GCC version from 2015...). Here are some examples I ran. First, I created a directory called `amogus` with `mkdir amogus`, and then changed into it with `cd amogus`. Then, I queried the files in the directory by running `ls -alt`. Then, I copied the pre-created `perl5` folder from '../perl5' to the current directory `amogus` using `cp -r ../perl5/ .'. Then, I check that it exists in the current directory with `ls` again, and finally, used the `mv` command to rename the `perl5` folder to `sus` (among us reference). 
+Now, you can try running some commands on the remote system. Note that the systems have horribly outdated packages, so some behaviour may be unexpected (Ex: GCC version from 2015...). Here are some examples I ran. First, I created a directory called `amogus` with `mkdir amogus`, and then changed into it with `cd amogus`. Then, I queried the files in the directory by running `ls -alt`. Then, I copied the pre-created `perl5` folder from `../perl5` to the current directory `amogus` using `cp -r ../perl5/ .`. Then, I check that it exists in the current directory with `ls` again, and finally, used the `mv` command to rename the `perl5` folder to `sus` (among us reference). 
 
 ![Commands](commands.png)
 
