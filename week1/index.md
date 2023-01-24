@@ -34,6 +34,6 @@ Here are some examples of other commands I ran:
 
 ![Commands](commands.png)
 
-First, I created a directory called `amogus` with `mkdir amogus`, and then changed into it with `cd amogus`. Then, I queried the files in the directory by running `ls -alt`. Then, I copied the pre-created `perl5` folder from `../perl5` to the current directory `amogus` using `cp -r ../perl5/ .`. Then, I check that it exists in the current directory with `ls` again, and finally, used the `mv` command to rename the `perl5` folder to `sus` (among us reference). 
+First, I created a directory called `amogus` with `mkdir amogus`, and then changed into it with `cd amogus`. Then, I queried the files in the directory by running `ls -alt`. Then, I copied the pre-created `perl5` folder from `../perl5` to the current directory `amogus` using `cp -r ../perl5/ .`. You have to use the `-r` flag to copy directories. Then, I check that it exists in the current directory with `ls` again, and finally, used the `mv` command to rename the `perl5` folder to `sus` (among us reference). 
 
 
