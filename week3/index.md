@@ -39,3 +39,4 @@ class StringServer {
     }
 }
 ```
+I made it by modifying the number server template, so smuch of the boilerplate code was unchanged. 
