@@ -48,3 +48,13 @@ Here are some examples of using `/add-message':
 Here, the `handleRequest` method was called by the `Server` class to handle the request. The argument to `handleRequest` was `/add-message?s=sus` -- I queried '/add-message' with `s = sus`. Then, the code called various helper methods to parse the url. For example, it called `getPath` and `equals` with the argument of `/add-message` in order to determine if the path was correct. And it used `.split` with the `=` argument to parse the value for the query. 
 
 In the end, the instance variable `String cur` was appended to with the input string plus a newline character `\n`. Then, `cur` was returned as the result of `handleRequest`, and it was printed to the browser. 
+
+![amogus](https://s.fft.ac/lLvEXk/direct)
+
+The methods called for this query are the same as the previous one. The only difference is that `cur` contained the value `sus\n` from the previous query, so when it was appended with the current input string, it became `sus\namogus\n`, and hence the output to the browser was: 
+
+```
+sus
+amogus
+```
+
