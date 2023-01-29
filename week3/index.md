@@ -58,3 +58,61 @@ sus
 amogus
 ```
 
+# Bugs
+
+We can consider `LinkedListExample.java`. A failure inducing input for this is the following:
+
+```java
+@Test
+public void test2(){
+    LinkedList l = new LinkedList();
+    l.append(1);
+    l.append(3); l.append(4);
+    assertEquals(4,l.last());
+    assertEquals(1,l.first());
+}
+```
+
+A non failure inducing input is:
+
+```java
+@Test
+public void test1(){
+    LinkedList l = new LinkedList();
+    l.prepend(1);
+    l.prepend(2);
+    assertEquals(2,l.first());
+}
+```
+
+When we run the tests above, we get the following output: 
+![running](image.png)
+
+This never terminates on `test2`, but, according to the dots, passes `test1`. 
+
+The bug was in the append method. The original code was:
+
+```
+/**
+ * Adds the value to the _end_ of the list
+ * @param value
+ */
+public void append(int value) {
+    if(this.root == null) {
+        this.root = new Node(value, null);
+        return;
+    }
+    // If it's just one element, add if after that one
+    Node n = this.root;
+    if(n.next == null) {
+        n.next = new Node(value, null);
+        return;
+    }
+    // Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+        n.next = new Node(value, null);
+    }
+}
+```    
+
