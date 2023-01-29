@@ -92,7 +92,7 @@ This never terminates on `test2`, but, according to the dots, passes `test1`.
 
 The bug was in the append method. The original code was:
 
-```
+```java
 /**
  * Adds the value to the _end_ of the list
  * @param value
@@ -115,4 +115,35 @@ public void append(int value) {
     }
 }
 ```    
+We can see that `n.next = new Node(value, null);` is misplaced; it should be after the while loop, not in it. Since it's in the loop, `n.next != null` will always be true, and hence there was an infinite loop in `test2`.
+
+Fixed code: 
+
+```java
+/**
+ * Adds the value to the _end_ of the list
+ * @param value
+ */
+public void append(int value) {
+    if(this.root == null) {
+        this.root = new Node(value, null);
+        return;
+    }
+    // If it's just one element, add if after that one
+    Node n = this.root;
+    if(n.next == null) {
+        n.next = new Node(value, null);
+        return;
+    }
+    // Otherwise, loop until the end and add at the end with a null
+    while(n.next != null) {
+        n = n.next;
+    }
+    n.next = new Node(value, null);
+}
+```    
+Moving `n.next = new Node(value, null);` after the while loop fixes the bug, as we should add the new node after the last node. The fixed code passes both tests. 
+
+
+
 
