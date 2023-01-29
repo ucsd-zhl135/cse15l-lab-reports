@@ -39,4 +39,12 @@ class StringServer {
     }
 }
 ```
-I made it by modifying the number server template, so smuch of the boilerplate code was unchanged. 
+I made it by modifying the number server template, so much of the boilerplate code was unchanged. 
+
+Here are some examples of using `/add-message': 
+
+![sus](https://s.fft.ac/L42sgK/direct)
+
+Here, the `handleRequest` method was called by the `Server` class to handle the request. The argument to `handleRequest` was `/add-message?s=sus` -- I queried '/add-message' with `s = sus`. Then, the code called various helper methods to parse the url. For example, it called `getPath` and `equals` with the argument of `/add-message` in order to determine if the path was correct. And it used `.split` with the `=` argument to parse the value for the query. 
+
+In the end, the instance variable `String cur` was appended to with the input string plus a newline character `\n`. Then, `cur` was returned as the result of `handleRequest`, and it was printed to the browser. 
