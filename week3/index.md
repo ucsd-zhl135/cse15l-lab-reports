@@ -144,6 +144,6 @@ public void append(int value) {
 ```    
 Moving `n.next = new Node(value, null);` after the while loop fixes the bug, as we should add the new node after the last node. The fixed code passes both tests. 
 
-
-
+# Part 3
+I learned how to use JUnit more in depth. Before, I only knew how to use the `assertEquals` method, but I learned how to use the `assertArrayEquals` and `assertEquals` with an epsilon for floating point values in lab. I also gained more experience in writing tests in JUnit.
 
