@@ -42,7 +42,7 @@ written_2/non-fiction/OUP/Abernathy
 ```
 This command returned all the directories in `written_2/`. This could be used to avoid errors when using the output of `find` in other commands such as grep, as you could only find files and avoid directories.
 
-For example, if I wanted to find all files with paths containing an "O", I could do 
+For example, if I wanted to find all files with names containing an "O", I could do 
 ```
 $ find written_2/ -name "*O*"
 written_2/travel_guides/berlitz2/NewOrleans-History.txt
@@ -52,7 +52,7 @@ written_2/non-fiction/OUP
 written_2/non-fiction/OUP/Castro/chO.txt
 ```
 
-But this returns directories as well. Using `-type f`, we only find the files with paths containing an "O"
+But this returns directories as well. Using `-type f`, we only find the files with names containing an "O"
 ```
 $ find written_2/ -name "*O*" -type f
 written_2/travel_guides/berlitz2/NewOrleans-History.txt
@@ -61,9 +61,66 @@ written_2/chO.txt
 written_2/non-fiction/OUP/Castro/chO.txt
 ```
 
+We can also search for files of a given size with the `-size` argument. I also learned this from https://linuxhandbook.com/find-command-examples/. For example, to find all the files that greater than 200 KB in size,
+```
+$ find written_2/ -size +200k
+written_2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz1/WhereToFrance.txt
+written_2/travel_guides/berlitz1/WhereToItaly.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/WhereToFrance.txt
+written_2/WhereToItaly.txt
+```
+The + specifices that we want greater than 200 KB. To find files less than a given size, we use -:
+```
+$ find written_2/ -size -2k
+written_2/travel_guides/berlitz1/HandRIstanbul.txt
+written_2/travel_guides/berlitz1/HandRIbiza.txt
+written_2/HandRIstanbul.txt
+written_2/HandRIbiza.txt
+```
 
+This finds the files that are smaller than 2 KB. If we don't use + or -, we want files that are exactly a given size.
 
+Lastly, we can search for files with multiple conditions with the `-o` argument. I also learned this from https://linuxhandbook.com/find-command-examples/. For example, to find files with names containing "Cal" or "Can",
+```
+$ find written_2/ -name "*Cal*" -o -name "*Can*"
+written_2/travel_guides/berlitz2/CanaryIslands-History.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-History.txt
+written_2/travel_guides/berlitz2/Cancun-WhatToDo.txt
+written_2/travel_guides/berlitz2/California-History.txt
+written_2/travel_guides/berlitz2/California-WhereToGo.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhatToDo.txt
+written_2/travel_guides/berlitz2/California-WhatToDo.txt
+written_2/travel_guides/berlitz2/Cancun-History.txt
+```
+We can also combine other arguments such as `-type` to search for files with names containing "Cal" or directories.
+```
+$ find written_2/ -name "*Cal*" -o -type d
+written_2/
+written_2/travel_guides
+written_2/travel_guides/berlitz1
+written_2/travel_guides/berlitz2
+written_2/travel_guides/berlitz2/California-History.txt
+written_2/travel_guides/berlitz2/California-WhereToGo.txt
+written_2/travel_guides/berlitz2/California-WhatToDo.txt
+written_2/California-History.txt
+written_2/California-WhereToGo.txt
+written_2/California-WhatToDo.txt
+written_2/non-fiction
+written_2/non-fiction/OUP
+written_2/non-fiction/OUP/Fletcher
+written_2/non-fiction/OUP/Castro
+written_2/non-fiction/OUP/Rybczynski
+written_2/non-fiction/OUP/Kauffman
+written_2/non-fiction/OUP/Berk
+written_2/non-fiction/OUP/Abernathy
+```
 
+This argument is useful to search for things more generally, like if I wanted to list all the files in a directory that are source code, I could combine extensions with `-o`. 
 
 
 
