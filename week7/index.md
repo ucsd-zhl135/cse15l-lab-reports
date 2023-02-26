@@ -22,11 +22,11 @@ git clone git@github.com:ucsd-zhl135/lab7.git ; cd lab7 ; javac -cp .:lib/hamcre
 And I also stored the ssh command for step 4 in the bash history of my local machine. 
 
 So for step 4:
-`
+```
 Keys pressed: <up><enter>
 
 This ran the command `ssh cs15lwi23adl@ieng6.ucsd.edu`, which automatically logged me into my ieng6 account as I had ssh keys set up.
-`
+```
 
 And for step 5-9:
 ```
