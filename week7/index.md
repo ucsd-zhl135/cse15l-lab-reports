@@ -22,7 +22,7 @@ git clone git@github.com:ucsd-zhl135/lab7.git ; cd lab7 ; javac -cp .:lib/hamcre
 And I also stored the ssh command for step 4 in the bash history of my local machine. 
 
 # Step 4: 
-Keys pressed: <up><enter>
+Keys pressed: `<up><enter>`
 
 This ran the command `ssh cs15lwi23adl@ieng6.ucsd.edu`, which automatically logged me into my ieng6 account as I had ssh keys set up.
 
@@ -30,7 +30,7 @@ This ran the command `ssh cs15lwi23adl@ieng6.ucsd.edu`, which automatically logg
 
 # Step 5-7:
 
-Keys pressed: <up><up><enter>
+Keys pressed: `<up><up><enter>`
 
 This ran the command `git clone git@github.com:ucsd-zhl135/lab7.git ; cd lab7 ; javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples ; sed -i "43s/index1/index2/g" ListExamples.java ; javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java ; java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples ; git add -A ; git commit -m "a" ; git push`, which completed all the steps in sequence.
 
