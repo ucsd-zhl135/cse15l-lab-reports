@@ -38,6 +38,8 @@ This ran the command `git clone git@github.com:ucsd-zhl135/lab7.git ; cd lab7 ; 
 
 You might wonder why I needed three `<up>`s to reach the command. This is because I directly edited `.bash_history`, but the commands I used to edit the file were added to the `.bash_history` after I replaced it with the big command. So I ended up having to go past `exit` and `vim .bash_history` to reach the command.
 
+For example:
+
 ![step5](step5.png)
 
 Note that the test name is different, as someone changed the file name in the original `lab7` repository for some reason.
