@@ -27,6 +27,7 @@ Keys pressed: <up><enter>
 
 This ran the command `ssh cs15lwi23adl@ieng6.ucsd.edu`, which automatically logged me into my ieng6 account as I had ssh keys set up.
 ```
+![step4](step4.png)
 
 And for step 5-9:
 ```
