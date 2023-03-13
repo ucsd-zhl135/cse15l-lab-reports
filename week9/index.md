@@ -71,3 +71,5 @@ After running that command, we once again hit the breakpoint at line 15, and can
 As expected, cur is "amogus\n", since we didn't add the current value to it yet. And the query value is "sus", query name is "s". After stepping, cur becomes "amogus\nsus\n" as expected.
 
 ![amogussus](amogussus.png) 
+
+So, using JDB, we found that the StringServer is working as expected. 
