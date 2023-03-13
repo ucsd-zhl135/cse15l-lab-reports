@@ -17,7 +17,7 @@ class Handler implements URLHandler {
             if(!p[0].equals("s")){
                 return "Invalid Query";
             }
-            
+            cur += p[1] + "\n"; 
             return cur;
         } else {
             return "404 Not Found!";
@@ -37,7 +37,6 @@ class StringServer {
         Server.start(port, new Handler());
     }
 }
-
 ```
 We can compile with debug information with `javac -g Server.java StringServer.java`. Since we need to pass in a command line argument for the port, we need to run jdb with the argument: `jdb StringServer 4000` for example. 
 
