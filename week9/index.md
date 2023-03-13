@@ -2,7 +2,7 @@
 ## Lab Report 5
 
 I did the first option -- exploring lab report 2 with JDB. The code for my `StringServer.java` is:
-```
+```java
 import java.io.IOException;
 import java.net.URI;
 
