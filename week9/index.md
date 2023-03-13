@@ -17,7 +17,7 @@ class Handler implements URLHandler {
             if(!p[0].equals("s")){
                 return "Invalid Query";
             }
-            `
+            
             return cur;
         } else {
             return "404 Not Found!";
