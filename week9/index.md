@@ -39,3 +39,8 @@ class StringServer {
 }
 
 ```
+We can compile with debug information with `javac -g Server.java StringServer.java`. Since we need to pass in a command line argument for the port, we need to run jdb with the argument: `jdb StringServer 4000` for example. 
+
+Here is a screenshot of running the server. 
+![jdb](jdb.png)
+
